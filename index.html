@@ -1,0 +1,323 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Atom</title>
+</head>
+
+<body>
+
+  <div class="atom-app">
+
+    <!-- =========================
+           LEFT NAVIGATION RAIL
+      ========================== -->
+
+    <aside class="navigation-rail">
+
+      <div class="atom-logo">
+        <img src="./src/icons/atomLogo.png" alt="Atom Logo" class="logo-image" />
+      </div>
+
+      <div class="nav-items">
+
+        <button class="nav-item" data-view="dashboard" title="Dashboard">
+          <div class="nav-icon-circle nav-icon-dashboard">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
+          </div>
+          <span>Dashboard</span>
+        </button>
+
+        <button class="nav-item" data-view="attendance" title="Attendance Record">
+          <div class="nav-icon-circle nav-icon-attendance">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path>
+            </svg>
+          </div>
+          <span>Attendance</span>
+        </button>
+
+        <div class="nav-divider"></div>
+
+        <div class="nav-group-label projects-nav-label">Projects</div>
+
+        <div class="nav-group-projects">
+          <button class="nav-item nav-sub-item active" data-view="projects" title="All Projects">
+            <div class="nav-icon-circle nav-icon-all">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <span>All</span>
+          </button>
+
+          <button class="nav-item nav-sub-item" data-view="pinned" title="Pinned Projects">
+            <div class="nav-icon-circle nav-icon-pinned">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                <path d="M14 11l2 2m-2-2l-2 2m2-2v4" stroke-width="1.8"></path>
+              </svg>
+            </div>
+            <span>Pinned</span>
+          </button>
+
+          <button class="nav-item nav-sub-item" data-view="recurring" title="Recurring Projects">
+            <div class="nav-icon-circle nav-icon-recurring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+              </svg>
+            </div>
+            <span>Recurring</span>
+          </button>
+
+        </div>
+
+        <button class="nav-item" data-view="notes" title="Notes">
+          <div class="nav-icon-circle nav-icon-notes">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <span>Notes</span>
+        </button>
+
+        <button class="nav-item" data-view="labels" title="Labels">
+          <div class="nav-icon-circle nav-icon-labels">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+          </div>
+          <span>Labels</span>
+        </button>
+
+        <button class="nav-item" data-view="people" title="People">
+          <div class="nav-icon-circle nav-icon-people">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <span>People</span>
+        </button>
+
+      </div>
+
+      <button class="nav-item settings-button" type="button" title="Settings" aria-label="Settings">
+        <div class="nav-icon-circle nav-icon-settings">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.4 1.4-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-2v-.09a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-1.4-1.4.06-.06A1.7 1.7 0 0 0 9.4 15a1.7 1.7 0 0 0-1.56-1.03H7v-2h.84A1.7 1.7 0 0 0 9.4 10a1.7 1.7 0 0 0-.34-1.88L9 8.06l1.4-1.4.06.06a1.7 1.7 0 0 0 1.88.34A1.7 1.7 0 0 0 13.37 5.5V5h2v.5a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.4 1.4-.06.06A1.7 1.7 0 0 0 19.4 10a1.7 1.7 0 0 0 1.56 1.03H21v2h-.04A1.7 1.7 0 0 0 19.4 15Z"></path>
+          </svg>
+        </div>
+        <span>Settings</span>
+      </button>
+
+    </aside>
+
+
+    <!-- =========================
+           PROJECT EXPLORER
+      ========================== -->
+
+    <aside class="project-explorer">
+
+      <!-- STANDARD EXPLORER -->
+      <div id="standard-explorer-view" class="explorer-view-pane">
+        <!-- PROJECT HEADER -->
+        <div class="panel-header">
+          <h2 id="panel-title">Projects</h2>
+          <div class="date-selector">
+            <select id="year-select">
+              <option>Loading...</option>
+            </select>
+            <select id="month-select">
+              <option>Loading...</option>
+            </select>
+            <button id="create-project">
+              +
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT LIST -->
+        <div class="project-list">
+          <div class="empty-state">
+            No Projects
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTES EXPLORER -->
+      <div id="notes-explorer-view" class="explorer-view-pane" style="display: none;">
+        <div class="panel-header">
+          <h2 id="notes-panel-title">Notes</h2>
+          <div class="date-selector notes-date-selector" style="display: flex;">
+            <select id="notes-year-select" class="notes-year-select">
+              <option>Loading...</option>
+            </select>
+            <select id="notes-month-select" class="notes-month-select">
+              <option>Loading...</option>
+            </select>
+            <button id="notes-add-button" class="note-action-button" type="button">+</button>
+          </div>
+        </div>
+        <div id="notes-list" class="notes-list project-list">
+          <div class="empty-state">No notes available</div>
+        </div>
+      </div>
+
+    </aside>
+
+
+    <!-- =========================
+           MAIN WORKSPACE
+      ========================== -->
+
+    <main class="workspace workplace">
+
+      <!-- STANDARD WORKSPACE -->
+      <div id="standard-workspace-view" class="workspace-view-pane">
+        <!-- PROJECT HEADER -->
+        <header class="project-header">
+          <div class="project-header-top">
+            <div class="project-date">
+              Today
+            </div>
+          </div>
+          <h1>
+            Inspo Project
+          </h1>
+          <div class="project-tags-header"></div>
+          <p>
+            This is a dummy description describing the selected project.
+            Project information will appear here.
+          </p>
+        </header>
+
+        <section class="workspace-container">
+          <div class="file-section">
+            <div class="file-section-header">
+              <div class="file-header-left">
+                <div class="section-title">
+                  Files
+                </div>
+                <nav class="file-breadcrumbs" id="file-breadcrumbs" aria-label="Folder path"></nav>
+              </div>
+              <div class="file-header-right">
+                <button class="file-header-action-button" id="open-project-folder-btn" type="button" title="Open project folder in File Explorer">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                  <span>Open Path</span>
+                </button>
+                <button class="file-header-action-button" id="copy-project-path-btn" type="button" title="Copy project folder path">
+                  <span>Copy Path</span>
+                </button>
+                <div class="file-view-controls" role="group" aria-label="File view">
+                  <button class="file-view-button active" type="button" data-file-view="list" aria-label="List view" aria-pressed="true" title="List view">☰</button>
+                  <button class="file-view-button" type="button" data-file-view="grid" aria-label="Grid view" aria-pressed="false" title="Grid view">▦</button>
+                </div>
+              </div>
+            </div>
+            <div class="file-list">
+              <div class="empty-state">
+                No Files
+              </div>
+            </div>
+          </div>
+
+          <div class="notes-panel">
+            <div class="notes-panel-header">
+              <div class="section-title">Notes</div>
+              <button class="note-action-button" id="create-note-button" type="button">+ Note</button>
+            </div>
+            <div class="notes-content">
+              <div class="empty-state">Select a project to view notes</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- NOTES WORKSPACE / EDITOR -->
+      <div id="notes-workspace-view" class="workspace-view-pane" style="display: none;">
+        <div class="notes-editor-container">
+          <div class="notes-top-header">
+            <div class="note-display-date" id="note-display-date">Jul 31, 2026</div>
+            <input type="text" class="note-title-input" id="note-title-input" placeholder="Note Title" value="Note Title" spellcheck="false" />
+          </div>
+
+          <div class="note-editor-card">
+            <div class="note-editor-toolbar" id="note-editor-toolbar">
+              <div class="toolbar-left-group">
+                <div class="toolbar-group">
+                  <button type="button" class="toolbar-btn" data-action="undo" title="Undo"><img src="./src/icons/text-editor/undo.svg" alt="Undo" /></button>
+                  <button type="button" class="toolbar-btn" data-action="redo" title="Redo"><img src="./src/icons/text-editor/redo.svg" alt="Redo" /></button>
+                </div>
+
+                <div class="toolbar-group">
+                  <button type="button" class="toolbar-btn" data-action="formatBlock" data-value="h3" title="Heading 3"><img src="./src/icons/text-editor/h3.svg" alt="H3" /></button>
+                  <button type="button" class="toolbar-btn" data-action="formatBlock" data-value="h1" title="Heading 1"><img src="./src/icons/text-editor/h1.svg" alt="H1" /></button>
+                  <button type="button" class="toolbar-btn" data-action="formatBlock" data-value="h2" title="Heading 2"><img src="./src/icons/text-editor/h2.svg" alt="H2" /></button>
+                </div>
+
+                <div class="toolbar-group">
+                  <button type="button" class="toolbar-btn" data-action="bold" title="Bold"><img src="./src/icons/text-editor/bold.svg" alt="Bold" /></button>
+                  <button type="button" class="toolbar-btn" data-action="italic" title="Italic"><img src="./src/icons/text-editor/italic.svg" alt="Italic" /></button>
+                  <button type="button" class="toolbar-btn" data-action="underline" title="Underline"><img src="./src/icons/text-editor/underline.svg" alt="Underline" /></button>
+                  <button type="button" class="toolbar-btn" data-action="strikethrough" title="Strikethrough"><img src="./src/icons/text-editor/strikethrough.svg" alt="Strikethrough" /></button>
+                </div>
+
+                <div class="toolbar-group">
+                  <button type="button" class="toolbar-btn" data-action="link" title="Insert Link"><img src="./src/icons/text-editor/link.svg" alt="Link" /></button>
+                  <button type="button" class="toolbar-btn" data-action="image" title="Insert Image"><img src="./src/icons/text-editor/image.svg" alt="Image" /></button>
+                </div>
+
+                <div class="toolbar-group">
+                  <button type="button" class="toolbar-btn checklist-btn" data-action="checklist" title="Checklist">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="checklist-icon">
+                      <rect x="1.5" y="1.5" width="15" height="15" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                    <span>Checklist</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="toolbar-right-group">
+                <button type="button" class="assign-project-pill-btn" id="notes-assign-project-btn">Assign Project</button>
+                <button type="button" class="goto-project-pill-btn" id="notes-goto-project-btn">Go-to Project</button>
+              </div>
+            </div>
+
+            <div class="note-editor-content" id="note-editor-content" contenteditable="true" spellcheck="false"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <main class="dashboard-view" id="dashboard-view" hidden></main>
+
+    <main class="attendance-record-view" id="attendance-record-view" hidden></main>
+
+    <div id="active-tab-content" aria-live="polite"></div>
+
+  </div>
+
+
+  <script type="module" src="/src/renderer.ts"></script>
+
+</body>
+
+</html>
